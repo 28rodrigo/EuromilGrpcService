@@ -5,7 +5,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["EuromilGrpcService/EuromilGrpcService.csproj", "EuromilGrpcService/"]
+COPY ["./EuromilGrpcService.csproj", "./"]
 RUN dotnet restore "EuromilGrpcService/EuromilGrpcService.csproj"
 COPY . .
 WORKDIR "/src/EuromilGrpcService"
